@@ -1,3 +1,317 @@
+:root {
+    --bloodaria-orange: #FFA726;
+    --bloodaria-beige: #F5E9DA;
+    --bloodaria-white: #fff;
+    --bloodaria-dark: #181A20;
+    --bloodaria-header: #23242A;
+    --bloodaria-accent: #FFA726;
+    --bloodaria-accent2: #F5E9DA;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background: var(--bloodaria-dark);
+    color: var(--bloodaria-white);
+}
+
+.bloodaria-feather-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bloodaria-dark);
+}
+
+.bloodaria-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bloodaria-header);
+    padding: 0 2rem;
+    height: 64px;
+    box-shadow: 0 2px 8px #000a;
+    border-bottom: 2px solid var(--bloodaria-accent);
+}
+.header-left {
+    display: flex;
+    align-items: center;
+}
+.bloodaria-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+}
+.bloodaria-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: var(--bloodaria-accent);
+}
+.header-center nav {
+    display: flex;
+    gap: 2rem;
+}
+.nav-selected {
+    color: var(--bloodaria-accent);
+    font-weight: bold;
+    border-bottom: 2.5px solid var(--bloodaria-accent);
+    padding-bottom: 4px;
+}
+.nav-disabled {
+    color: #888;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--bloodaria-header);
+    border-radius: 8px;
+    padding: 0.3rem 0.8rem;
+    border: 1.5px solid var(--bloodaria-accent2);
+}
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: none;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+.user-name {
+    font-size: 1rem;
+    color: var(--bloodaria-white);
+}
+.header-icons span {
+    margin-left: 0.7rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    color: var(--bloodaria-accent);
+}
+.header-icons span:hover {
+    opacity: 1;
+    color: var(--bloodaria-beige);
+}
+
+.bloodaria-main {
+    display: flex;
+    flex: 1;
+    background: var(--bloodaria-dark);
+    padding: 2rem 2rem 0 2rem;
+    gap: 2rem;
+}
+.main-center {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-bg {
+    background: url('../images/background/bg1.jpg') center/cover no-repeat, var(--bloodaria-header);
+    border-radius: 18px;
+    box-shadow: 0 4px 32px #000a;
+    min-width: 520px;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.main-overlay {
+    background: rgba(24,26,32,0.85);
+    border-radius: 18px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.main-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+}
+.not-logged {
+    font-size: 1.3rem;
+    color: var(--bloodaria-white);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.play-btn,
+.play-btn:disabled {
+    color: #fff !important;
+    background: #FFA726 !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+.play-btn:disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+}
+.play-btn:hover {
+    background: #F5E9DA;
+    color: #FFA726;
+    box-shadow: 0 8px 32px #FFA72644, 0 4px 16px #0005;
+    transform: scale(1.04);
+}
+.main-version {
+    color: #FFA726;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    text-shadow: 0 1px 2px #0008;
+}
+
+.main-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.servers-panel {
+    background: var(--bloodaria-header);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #000a;
+    padding: 1.5rem 1rem;
+    width: 270px;
+    margin-top: 0.5rem;
+    border: 2px solid var(--bloodaria-accent2);
+}
+.servers-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--bloodaria-accent);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+.servers-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.servers-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bloodaria-dark);
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.7rem;
+    color: var(--bloodaria-white);
+    font-size: 1.1rem;
+    box-shadow: 0 1px 4px #0004;
+    border-left: 4px solid var(--bloodaria-accent);
+}
+.server-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--bloodaria-accent);
+    border-radius: 6px;
+    margin-right: 0.7rem;
+    display: inline-block;
+}
+.server-count {
+    color: var(--bloodaria-accent);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.bloodaria-news-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: var(--bloodaria-header);
+    border-radius: 0 0 18px 18px;
+    margin: 2rem 2rem 0 2rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 12px #000a;
+    gap: 2rem;
+    border-top: 2px solid var(--bloodaria-accent2);
+}
+.news-section {
+    flex: 2;
+}
+.news-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--bloodaria-accent);
+    margin-bottom: 1rem;
+}
+.news-list {
+    max-height: 120px;
+    overflow-y: auto;
+    background: var(--bloodaria-dark);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 1px 4px #0004;
+    border-left: 4px solid var(--bloodaria-accent2);
+}
+.discord-section {
+    flex: 1;
+    background: var(--bloodaria-dark);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-left: 1.5rem;
+    box-shadow: 0 1px 4px #0004;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-left: 4px solid var(--bloodaria-accent2);
+}
+.discord-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--bloodaria-accent);
+    margin-bottom: 0.5rem;
+}
+.discord-desc {
+    color: var(--bloodaria-white);
+    font-size: 1rem;
+    text-align: center;
+}
+.discord-desc a {
+    color: var(--bloodaria-accent);
+    text-decoration: underline;
+}
+.ads-section {
+    flex: 1;
+    background: var(--bloodaria-dark);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-left: 1.5rem;
+    box-shadow: 0 1px 4px #0004;
+    color: var(--bloodaria-white);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 4px solid var(--bloodaria-accent2);
+}
+
+.bloodaria-footer {
+    text-align: center;
+    color: #888;
+    font-size: 0.95rem;
+    margin: 1.5rem 0 0.5rem 0;
+    letter-spacing: 1px;
+}
+
 .home .container {
     display: flex;
     height: 100%;
@@ -376,3 +690,5 @@
 .active-instance {
     background: var(--element-color);
 }
+
+.header-center nav .nav-disabled { display: none; }

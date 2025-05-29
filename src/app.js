@@ -9,6 +9,8 @@ const { autoUpdater } = require('electron-updater')
 
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
+const { BrowserWindow, Menu } = require('electron');
 
 const UpdateWindow = require("./assets/js/windows/updateWindow.js");
 const MainWindow = require("./assets/js/windows/mainWindow.js");
@@ -126,3 +128,31 @@ autoUpdater.on('error', (err) => {
     const updateWindow = UpdateWindow.getWindow();
     if (updateWindow) updateWindow.webContents.send('error', err);
 });
+
+function createWindow() {
+    destroyWindow();
+    mainWindow = new BrowserWindow({
+        title: pkg.preductname,
+        width: 1280,
+        height: 720,
+        minWidth: 980,
+        minHeight: 552,
+        resizable: true,
+        icon: `./src/assets/images/icon.${os.platform() === "win32" ? "ico" : "png"}`,
+        frame: false,
+        show: false,
+        webPreferences: {
+            contextIsolation: false,
+            nodeIntegration: true
+        },
+    });
+    Menu.setApplicationMenu(null);
+    mainWindow.setMenuBarVisibility(false);
+    mainWindow.loadFile(path.join(`${app.getAppPath()}/src/launcher.html`));
+    mainWindow.once('ready-to-show', () => {
+        if (mainWindow) {
+            if (dev) mainWindow.webContents.openDevTools({ mode: 'detach' })
+            mainWindow.show()
+        }
+    });
+}

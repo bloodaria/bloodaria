@@ -1,61 +1,68 @@
-<div class="container">
-    <div class="status-server">
-        <img class="server-status-icon" src="assets/images/icon.png">
-        <div class="server-status-infos">
-            <div class="server-status-name">Minecraft</div>
-            <div class="server-status-text">operationeel - 0 ms</div>
+<div class="bloodaria-feather-wrapper">
+    <!-- Header -->
+    <header class="bloodaria-header">
+        <div class="header-left">
+            <img src="assets/images/icon.png" alt="Bloodaria Logo" class="bloodaria-logo">
+            <span class="bloodaria-title">BLOODARIA CLIENT</span>
         </div>
-        <div class="status-player-count">
-            <div class="player-count">0</div>
+        <div class="header-center">
+            <nav>
+                <span class="nav-selected">Jouer</span>
+            </nav>
         </div>
-    </div>
+        <div class="header-right">
+            <div class="user-info">
+                <img src="https://crafatar.com/avatars/8667ba71b85a4004af54457a9734eed7?size=32&overlay" alt="avatar" class="user-avatar">
+                <span class="user-name">Guest User</span>
+            </div>
+            <div class="header-icons">
+                <span class="icon-settings"></span>
+            </div>
+        </div>
+    </header>
 
-    <div class="home-bottom">
-        <div class="new-tab">
-            <div class="titre-tab-new">Actualités</div>
+    <!-- Main Content -->
+    <main class="bloodaria-main">
+        <section class="main-center">
+            <div class="main-bg">
+                <div class="main-overlay">
+                    <div class="main-message">
+                        <span class="not-logged">Vous n'êtes pas connecté. Veuillez vous connecter pour jouer.</span>
+                        <button class="play-btn">Jouer</button>
+                        <div class="main-version">Version : 1.12.2</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="main-right">
+            <div class="servers-panel">
+                <div class="servers-title">SERVEURS PARTENAIRES</div>
+                <ul class="servers-list">
+                    <li><span class="server-icon"></span> PvPLegacy <span class="server-count">345</span></li>
+                    <li><span class="server-icon"></span> Crystal Chaos <span class="server-count">351</span></li>
+                    <li><span class="server-icon"></span> FlameFrags <span class="server-count">438</span></li>
+                    <li><span class="server-icon"></span> LeoneMC <span class="server-count">435</span></li>
+                    <li><span class="server-icon"></span> EuropeMC <span class="server-count">313</span></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <!-- News & Footer -->
+    <section class="bloodaria-news-footer">
+        <div class="news-section">
+            <div class="news-title">DERNIÈRES NEWS DE BLOODARIA</div>
             <div class="news-list content-scroll"></div>
         </div>
-        <div class="social-tab">
-            <div class="social-list content-scroll">
-                <div data-url="https://discord.gg/e9q7Yr2cuQ" class="social-block">
-                    <div class="icon-discord icon-social"></div>
-                </div>
-
-                <div data-url="https://github.com/luuxis" class="social-block">
-                    <div class="icon-github icon-social"></div>
-                </div>
-
-                <div data-url="https://www.youtube.com/LuuxisHD" class="social-block">
-                    <div class="icon-youtube icon-social"></div>
-                </div>
-            </div>
+        <div class="discord-section">
+            <div class="discord-title">CAPE DISCORD OFFERTE !</div>
+            <div class="discord-desc">Obtenez votre cape animée Discord gratuite en liant votre compte et en rejoignant notre serveur Discord !<br><a href="https://discord.gg/e9q7Yr2cuQ" target="_blank">bloodaria.com/discord</a></div>
         </div>
-    </div>
-
-    <div class="sidebar">
-        <div class="player-options">
-            <div class="player-head"></div>
+        <div class="ads-section">
+            <span>La pub nous soutient ! Acheter 600+ points retire les pubs pendant 30 jours.</span>
         </div>
-
-        <div class="play-elements">
-            <div class="play-instance">
-                <button class="play-btn">Jouer</button>
-                <div class="instance-select icon-arrow"></div>
-            </div>
-            <div class="info-starting-game">
-                <div class="info-starting-game-text">Connexion...</div>
-                <progress value="0" max="0" class="progress-bar"></progress>
-            </div>
-        </div>
-
-        <div class="settings-btn icon-settings"></div>
-    </div>
-
-    <div class="instance-popup">
-        <div class="instances-tab">
-            <div class="close-popup icon-close"></div>
-            <p>Choisissez votre instance...</p>
-            <div class="instances-List"></div>
-        </div>
-    </div>
+    </section>
+    <footer class="bloodaria-footer">
+        © Bloodaria Client 2025. Tous droits réservés.
+    </footer>
 </div>
