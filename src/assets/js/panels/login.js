@@ -9,7 +9,6 @@ import { popup, database, changePanel, accountSelect, addAccount, config, setSta
 
 class Login {
     static id = "login";
-    // Ajoutez cette fonction à la fin de la méthode init
     async init(config) {
         this.config = config;
         this.db = new database();
@@ -34,11 +33,6 @@ class Login {
         let loginHome = document.querySelector('.login-home');
         let microsoftBtn = document.querySelector('.connect-home');
         loginHome.style.display = 'block';
-        
-        // Ajout de l'animation
-        setTimeout(() => {
-            loginHome.classList.add('active');
-        }, 100);
 
         microsoftBtn.addEventListener("click", () => {
             popupLogin.openPopup({
@@ -74,11 +68,6 @@ class Login {
         let emailOffline = document.querySelector('.email-offline');
         let connectOffline = document.querySelector('.connect-offline');
         loginOffline.style.display = 'block';
-        
-        // Ajout de l'animation
-        setTimeout(() => {
-            loginOffline.classList.add('active');
-        }, 100);
 
         connectOffline.addEventListener('click', async () => {
             if (emailOffline.value.length < 3) {
@@ -127,20 +116,8 @@ class Login {
         let connectAZauthA2F = document.querySelector('.connect-AZauth-A2F');
         let AZauthConnectBTN = document.querySelector('.connect-AZauth');
         let AZauthCancelA2F = document.querySelector('.cancel-AZauth-A2F');
-        let registerBtn = document.querySelector('.register-btn');
 
         loginAZauth.style.display = 'block';
-        
-        // Ajout de l'animation
-        setTimeout(() => {
-            loginAZauth.classList.add('active');
-        }, 100);
-
-        // Ajout de l'événement pour le bouton d'inscription
-        registerBtn.addEventListener('click', () => {
-            const { shell } = require('electron');
-            shell.openExternal('https://www.bloodariamc.fr/user/register');
-        });
 
         AZauthConnectBTN.addEventListener('click', async () => {
             PopupLogin.openPopup({
@@ -171,11 +148,6 @@ class Login {
                 loginAZauthA2F.style.display = 'block';
                 loginAZauth.style.display = 'none';
                 PopupLogin.closePopup();
-                
-                // Ajout de l'animation pour A2F
-                setTimeout(() => {
-                    loginAZauthA2F.classList.add('active');
-                }, 100);
 
                 AZauthCancelA2F.addEventListener('click', () => {
                     loginAZauthA2F.style.display = 'none';
@@ -246,33 +218,3 @@ class Login {
     }
 }
 export default Login;
-
-// Ajouter des animations aux panneaux de connexion
-document.querySelectorAll('.login-tabs').forEach(tab => {
-    if (tab.style.display === 'block') {
-        setTimeout(() => {
-            tab.classList.add('active');
-        }, 100);
-    }
-});
-
-// Supprimez les lignes suivantes qui causent l'erreur
-// loginHome.style.display = 'block';
-// setTimeout(() => {
-//     loginHome.classList.add('active');
-// }, 100);
-
-// loginOffline.style.display = 'block';
-// setTimeout(() => {
-//     loginOffline.classList.add('active');
-// }, 100);
-
-// loginAZauth.style.display = 'block';
-// setTimeout(() => {
-//     loginAZauth.classList.add('active');
-// }, 100);
-
-// loginAZauthA2F.style.display = 'block';
-// setTimeout(() => {
-//     loginAZauthA2F.classList.add('active');
-// }, 100);
