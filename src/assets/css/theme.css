@@ -1,0 +1,28 @@
+.global {
+    --element-color: #c5a572; /* Couleur or égyptien */
+    --accent-color: #9b2335; /* Rouge royal égyptien */
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --hover-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --dark-color: #1a1a1a;
+    --light-color: #f5f5f5;
+}
+
+.dark {
+    --color: #f5f5f5;
+    --background: #1a1a1a;
+    --background-rgb: 26, 26, 26; /* Ajout de la variable RGB */
+    --background-element: #2d2d2d;
+    --background-transparent: rgba(29, 29, 29, 0.95);
+    --shadow: rgba(0, 0, 0, 0.4);
+    --svg-color: brightness(0) saturate(100%) invert(95%);
+}
+
+.light {
+    --color: #1a1a1a;
+    --background: #f5f5f5;
+    --background-rgb: 245, 245, 245; /* Ajout de la variable RGB */
+    --background-element: #e0d5c5; /* Beige sable */
+    --background-transparent: rgba(224, 213, 197, 0.95);
+    --shadow: rgba(0, 0, 0, 0.1);
+    --svg-color: brightness(0) saturate(100%);
+}
