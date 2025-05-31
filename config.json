@@ -1,0 +1,20 @@
+{
+    "maintenance": false,
+    "maintenance_message": "Le launcher est en maintenance.",
+    "online": false,
+    "client_id": "13f589e1-e2fc-443e-a68a-63b0092b8eeb",
+    "dataDirectory": "Bloodaria",
+    "game_args": ["--server", "91.197.6.215", "--port", "25662"],
+    "auth": {
+        "methods": ["microsoft", "offline", "sql"],
+        "api": {
+            "enabled": true,
+            "url": "https://www.bloodariamc.fr/api",
+            "endpoints": {
+                "login": "/auth/login",
+                "register": "/auth/register",
+                "verify": "/auth/verify"
+            }
+        }
+    }
+} 
