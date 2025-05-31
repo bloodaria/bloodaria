@@ -1,7 +1,7 @@
 {
     "name": "Bloodaria",
     "preductname": "Bloodaria Launcher",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Launcher Bloodaria",
     "main": "src/app.js",
     "url": "http://launcher.rizyox.fr",

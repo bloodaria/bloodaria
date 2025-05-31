@@ -71,10 +71,10 @@ async function addAccount(data) {
         <div class="profile-image" ${skin ? 'style="background-image: url(' + skin + ');"' : ''}></div>
         <div class="profile-infos">
             <div class="profile-pseudo">${data.name}</div>
-            <div class="profile-uuid">${data.uuid}</div>
+           <div class="profile-uuid">COMPTE BLOODARIA</div>
         </div>
         <div class="delete-profile" id="${data.ID}">
-            <div class="icon-account-delete delete-profile-icon"></div>
+            <i class="fa-solid fa-right-from-bracket delete-profile-icon"></i>
         </div>
     `
     

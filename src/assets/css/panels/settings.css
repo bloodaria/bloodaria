@@ -216,7 +216,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: calc(400px - 8px);
+    width: calc(520px - 8px); /* plus large, ajuste selon besoin */
     height: calc(100px - 8px);
     margin: 1rem;
     border-radius: 15px;
@@ -258,7 +258,7 @@
 
 .profile-infos {
     text-align: center;
-    width: 10rem;
+    width: 16rem; /* plus large, ajuste selon besoin */ 
     pointer-events: none;
 
 }
@@ -289,7 +289,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ff2c2c;
+    color: #e01717;
     cursor: pointer;
 }
 

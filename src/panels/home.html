@@ -69,50 +69,23 @@
 </div>
 
 <style>
-.notif-menu {
-    max-height: calc(100vh - 200px);
-}
-.notif-news-list {
-    max-height: calc(100vh - 250px);
-}
-
-.social-block {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    width: 70px;
-    height: 70px;
-    margin: 0 0.5rem 1rem 0.5rem;
-    display: flex;
+.play-btn::before {
+    content: "\f04b";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 1.7rem;
+    height: 1.7rem;
+    background: #fff;
     border-radius: 50%;
-    transition: transform 0.18s cubic-bezier(.4,1.3,.6,1), box-shadow 0.2s, background 0.2s;
-    cursor: pointer;
+    margin-right: 0.7rem;
+    font-size: 1.1rem;
+    color: #ff6b00;
+    text-align: center;
+    line-height: 1.7rem;
 }
 
-.social-block i {
-    font-size: 2.5rem;
-    color: #888;
-    transition: color 0.2s, text-shadow 0.2s;
-}
 
-.social-block:hover {
-    transform: translateY(-6px) scale(1.13);
-    box-shadow: 0 6px 24px #0002;
-    background: none;
-}
-
-.social-block:hover i.fa-brands.fa-discord {
-    color: #5865F2;
-    text-shadow: 0 2px 12px #5865F299;
-}
-.social-block:hover i.fa-brands.fa-youtube {
-    color: #FF0000;
-    text-shadow: 0 2px 12px #FF000099;
-}
-.social-block:hover i.fa-solid.fa-globe {
-    color: #009688;
-    text-shadow: 0 2px 12px #00968899;
-}
 </style>

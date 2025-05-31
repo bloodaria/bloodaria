@@ -91,7 +91,7 @@ class Home {
                         </div>
                         <div class="news-content">
                             <div class="bbWrapper">
-                                <div class="news-content-text">${News.content.replace(/(\r\n|\n|\r)/g, '<br>')}</div>
+                                <p>${News.content.replace(/(\r\n|\n|\r)/g, '<br>')}</p>
                                 <p class="news-author">Auteur - <span>${News.author}</span></p>
                             </div>
                         </div>`
@@ -398,7 +398,7 @@ class Home {
                         </div>
                     </div>
                     <div class=\"news-content\">
-                        <div class=\"bbWrapper\">
+                            <p>${News.content.replace(/(\r\n|\n|\r)/g, '<br>')}</p>
                             <div class=\"news-content-text\">${escapeHTML(News.content).replace(/(\r\n|\n|\r)/g, '<br>')}</div>
                             <p class=\"news-author\">Auteur - <span>${escapeHTML(News.author)}</span></p>
                         </div>
